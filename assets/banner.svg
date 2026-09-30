@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.8"/>
+    </linearGradient>
+    
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .pulse-line {
+        stroke-dasharray: 100 400;
+        animation: dash 6s linear infinite;
+      }
+      .node-pulse {
+        animation: pulse 3s ease-in-out infinite alternate;
+      }
+      .node-pulse-2 {
+        animation: pulse 4s ease-in-out infinite alternate-reverse;
+      }
+      @keyframes dash {
+        0% { stroke-dashoffset: 500; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0% { transform: scale(0.98); opacity: 0.4; }
+        100% { transform: scale(1.02); opacity: 0.8; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="320" rx="16" fill="url(#bg)"/>
+  
+  <!-- Subtle Grid -->
+  <g stroke="#334155" stroke-width="0.5" opacity="0.3">
+    <path d="M 0,40 L 1200,40 M 0,80 L 1200,80 M 0,120 L 1200,120 M 0,160 L 1200,160 M 0,200 L 1200,200 M 0,240 L 1200,240 M 0,280 L 1200,280" />
+    <path d="M 100,0 L 100,320 M 200,0 L 200,320 M 300,0 L 300,320 M 400,0 L 400,320 M 500,0 L 500,320 M 600,0 L 600,320 M 700,0 L 700,320 M 800,0 L 800,320 M 900,0 L 900,320 M 1000,0 L 1000,320 M 1100,0 L 1100,320" />
+  </g>
+
+  <!-- Animated Dynamic Background Cyber Nodes & Attack Paths (Kept in Background) -->
+  <g opacity="0.4">
+    <!-- Connecting Tech Lines -->
+    <path d="M 100,80 Q 300,40 500,100 T 900,60 T 1100,120" stroke="#38bdf8" stroke-width="1.5" fill="none" class="pulse-line"/>
+    <path d="M 50,240 Q 250,280 600,220 T 1000,260" stroke="#818cf8" stroke-width="1.5" fill="none" class="pulse-line"/>
+    <path d="M 200,280 L 400,200 L 800,250 L 1050,180" stroke="#a855f7" stroke-width="1" stroke-dasharray="4 4" fill="none"/>
+
+    <!-- Nodes -->
+    <circle cx="100" cy="80" r="6" fill="#38bdf8" class="node-pulse"/>
+    <circle cx="500" cy="100" r="8" fill="#818cf8" class="node-pulse-2"/>
+    <circle cx="900" cy="60" r="5" fill="#c084fc" class="node-pulse"/>
+    <circle cx="1100" cy="120" r="7" fill="#22d3ee" class="node-pulse-2"/>
+    <circle cx="400" cy="200" r="6" fill="#f43f5e" class="node-pulse"/>
+    <circle cx="800" cy="250" r="7" fill="#10b981" class="node-pulse-2"/>
+  </g>
+
+  <!-- Decorative Floating Cyber Badges (Low opacity in corners/edges) -->
+  <g transform="translate(60, 45)" opacity="0.35">
+    <rect width="110" height="28" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+    <text x="55" y="18" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">🔒 DISCOVER</text>
+  </g>
+
+  <g transform="translate(1030, 45)" opacity="0.35">
+    <rect width="110" height="28" rx="14" fill="#1e293b" stroke="#818cf8" stroke-width="1"/>
+    <text x="55" y="18" fill="#818cf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">⚡ VALIDATE</text>
+  </g>
+
+  <g transform="translate(60, 245)" opacity="0.35">
+    <rect width="110" height="28" rx="14" fill="#1e293b" stroke="#c084fc" stroke-width="1"/>
+    <text x="55" y="18" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">🎯 PRIORITIZE</text>
+  </g>
+
+  <g transform="translate(1030, 245)" opacity="0.35">
+    <rect width="110" height="28" rx="14" fill="#1e293b" stroke="#10b981" stroke-width="1"/>
+    <text x="55" y="18" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" text-anchor="middle">🛡️ REMEDIATE</text>
+  </g>
+
+  <!-- FOREGROUND TEXT CONTENT (Guaranteed high visibility and clarity) -->
+  <!-- Main Title -->
+  <text x="600" y="125" fill="url(#titleGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="36" font-weight="800" text-anchor="middle" letter-spacing="0.5" filter="url(#glow)">
+    Continuous Threat Exposure Management
+  </text>
+  
+  <text x="600" y="165" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="2">
+    (CTEM) ECOSYSTEM
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="208" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="500" text-anchor="middle" letter-spacing="0.3">
+    Curated SaaS Platforms, Exposure Assessment &amp; Open-Source Security Validation Tools
+  </text>
+
+  <!-- Accent Line Below Text -->
+  <rect x="450" y="228" width="300" height="3" rx="1.5" fill="url(#accentGrad)"/>
+</svg>
