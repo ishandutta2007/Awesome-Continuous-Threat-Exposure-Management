@@ -54,7 +54,7 @@ A curated directory of SaaS platforms, breach and attack simulation (BAS) tools,
 
 The open-source CTEM ecosystem provides foundational building blocks for breach simulation, vulnerability prioritization, threat intelligence enrichment, and attack surface discovery.
 
-| Repository / Project | Description | GitHub Stars |
+| Repository / Project | Description | GitHub_Stars |
 | :--- | :--- | :--- |
 | **[Trivy](https://github.com/aquasecurity/trivy)** | Comprehensive security scanner for container images, file systems, Git repositories, and cloud configurations. | [![Stars](https://img.shields.io/github/stars/aquasecurity/trivy?style=social&color=white)](https://github.com/aquasecurity/trivy/stargazers) |
 | **[Grype](https://github.com/anchore/grype)** | Vulnerability scanner for container images and filesystems, ideal for CI/CD exposure checks. | [![Stars](https://img.shields.io/github/stars/anchore/grype?style=social&color=white)](https://github.com/anchore/grype/stargazers) |
